@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: 1-init-project.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 2-init-task.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 3-init-user.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 4-init-join-project-user.yaml
+      relativeToChangelogFile: true

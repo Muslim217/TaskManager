@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: mus21
+      changes:
+        - createTable:
+            tableName: project_to_user
+            columns:
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_join_user
+                    references: user(id)
+              - column:
+                  name: project_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_join_project
+                    references: project(id)
