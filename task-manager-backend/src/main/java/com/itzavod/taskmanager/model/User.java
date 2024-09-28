@@ -14,7 +14,7 @@ public class User {
     private Long id;
     private String username;
     private String email;
-    private Role role;
+    private String role;
     private String createdAt;
     private String updatedAt;
     @ManyToMany

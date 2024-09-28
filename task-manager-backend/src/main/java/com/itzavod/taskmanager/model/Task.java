@@ -17,7 +17,7 @@ public class Task {
     @ManyToOne
     @JoinColumn(name = "project_id", nullable = false)
     private Project project;
-    private Status status;
+    private String status;
     private String createdAt;
     private String updatedAt;
 }

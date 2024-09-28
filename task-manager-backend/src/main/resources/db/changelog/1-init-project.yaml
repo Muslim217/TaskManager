@@ -13,7 +13,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: Long
+                  type: int
                   constraints:
                     primaryKey: true
                     nullable: false

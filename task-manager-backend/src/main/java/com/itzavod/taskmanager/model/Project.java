@@ -1,25 +1,27 @@
 package com.itzavod.taskmanager.model;
 
 import com.itzavod.taskmanager.enumeration.Status;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Set;
 
 @Data
 @Entity
+@AllArgsConstructor
 public class Project {
     @Id
     private Long id;
     private String name;
     private String description;
-    private Status status;
+    private String status;
     private String createdAt;
-    private String updatedAd;
+    private String updatedAt;
     @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Task> tasks;
 
+    public Project() {
+
+    }
 }
