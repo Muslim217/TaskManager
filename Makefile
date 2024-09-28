@@ -4,3 +4,5 @@ start:
 
 stop:
 	@docker-compose -f docker/docker-compose.yaml stop
+	@docker rm docker-database-1
+	@docker rm docker-backend-1

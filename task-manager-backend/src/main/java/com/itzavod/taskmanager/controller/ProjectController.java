@@ -45,7 +45,7 @@ public class ProjectController {
 
     @GetMapping
     public ResponseEntity<List<Project>> getAllProject() {
-        List<Project> allProject =
+        List<Project> allProject = projectService.getAllProject();
         return ResponseEntity.status(HttpStatus.OK).body(new ArrayList<>());
 
     }
